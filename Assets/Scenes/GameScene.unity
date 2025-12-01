@@ -49114,7 +49114,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 106820, guid: 25475d0a94cb47348a7bcbc336364818, type: 3}
       propertyPath: m_Name
-      value: Vehicle02_Piaggio
+      value: Delivery_Vehicle
       objectReference: {fileID: 0}
     - target: {fileID: 433212, guid: 25475d0a94cb47348a7bcbc336364818, type: 3}
       propertyPath: m_LocalPosition.x
