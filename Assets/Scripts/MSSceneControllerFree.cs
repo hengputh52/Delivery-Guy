@@ -19,7 +19,7 @@ public class ControlsFree {
 	public KeyCode startTheVehicle = KeyCode.F;
 
 	[Space(10)][Tooltip("If this variable is true, the control for this variable will be activated.")]
-	public bool enable_enterEndExit_Input = true;
+	public bool enable_enterEndExit_Input = false; // Disabled - player stays in car
 	[Tooltip("The key that must be pressed to enter or exit the vehicle.")]
 	public KeyCode enterEndExit = KeyCode.T;
 
@@ -140,9 +140,31 @@ public class MSSceneControllerFree : MonoBehaviour {
 				sceneControllers [x].gameObject.SetActive (false);
 			}
 		}
+		
+		// Auto-find vehicle if none assigned
+		if (vehicles == null || vehicles.Length == 0) {
+			MSVehicleControllerFree foundVehicle = FindObjectOfType<MSVehicleControllerFree>();
+			if (foundVehicle != null) {
+				vehicles = new GameObject[] { foundVehicle.gameObject };
+				Debug.Log("Auto-assigned vehicle: " + foundVehicle.gameObject.name);
+			}
+		}
+		
+		// Clean up null entries in vehicles array
+		if (vehicles != null && vehicles.Length > 0) {
+			var validVehicles = new List<GameObject>();
+			for (int i = 0; i < vehicles.Length; i++) {
+				if (vehicles[i] != null && vehicles[i].GetComponent<MSVehicleControllerFree>() != null) {
+					validVehicles.Add(vehicles[i]);
+				}
+			}
+			if (validVehicles.Count > 0) {
+				vehicles = validVehicles.ToArray();
+			}
+		}
+		
 		if (startingVehicle >= vehicles.Length) {
-			error = true;
-			Debug.LogError ("Vehicle selected to start does not exist in the 'vehicles' list");
+			startingVehicle = 0; // Reset to first vehicle
 		}
 		if (vehicles.Length == 0) {
 			error = true;
@@ -223,25 +245,24 @@ public class MSSceneControllerFree : MonoBehaviour {
 					vehicles [x].GetComponent<MSVehicleControllerFree> ().isInsideTheCar = false;
 				}
 			}
-			playerIsNull = false;
-			if (player) {
-				player.SetActive (false);
-			} else {
-				playerIsNull = true;
+			playerIsNull = true; // Player not needed - always in car
+			player = null; // Clear player reference
+			startInPlayer = false; // Always start in vehicle
+			
+			// Always start inside the vehicle - set flag now, will call EnterInVehicle in Start
+			if (vehicles.Length > startingVehicle && vehicles [currentVehicle]) {
+				vehicles [startingVehicle].GetComponent<MSVehicleControllerFree> ().isInsideTheCar = true;
 			}
-			if (startInPlayer) {
-				if (player) {
-					player.SetActive (true);
-				} else {
-					startInPlayer = false;
-					if (vehicles.Length > startingVehicle && vehicles [currentVehicle]) {
-						vehicles [startingVehicle].GetComponent<MSVehicleControllerFree> ().isInsideTheCar = true;
-					}
-				}
-			} else {
-				if (vehicles.Length > startingVehicle && vehicles [currentVehicle]) {
-					vehicles [startingVehicle].GetComponent<MSVehicleControllerFree> ().isInsideTheCar = true;
-				}
+		}
+	}
+	
+	void Start() {
+		if (!error && vehicles.Length > 0) {
+			// Ensure vehicle is properly entered after all scripts have initialized
+			currentVehicle = startingVehicle;
+			vehicleCode = vehicles[currentVehicle].GetComponent<MSVehicleControllerFree>();
+			if (vehicleCode != null) {
+				vehicleCode.EnterInVehicle();
 			}
 		}
 	}
@@ -308,105 +329,11 @@ public class MSSceneControllerFree : MonoBehaviour {
 				Time.timeScale = Mathf.Lerp (Time.timeScale, 1.0f, Time.fixedDeltaTime * 5.0f);
 			}
 
-			if ((Input.GetKeyDown (controls.enterEndExit)||enterAndExitBool) && !blockedInteraction && player && controls.enable_enterEndExit_Input) {
-				if (vehicles.Length <= 1) {
-					if (vehicleCode.isInsideTheCar) {
-						vehicleCode.ExitTheVehicle ();
-						if (player) {
-							player.SetActive (true);
-							if (vehicleCode.doorPosition[0].transform.position != vehicles [currentVehicle].transform.position) {
-								player.transform.position = vehicleCode.doorPosition[0].transform.position;
-							} else {
-								player.transform.position = vehicleCode.doorPosition[0].transform.position + Vector3.up * 3.0f;
-							}
-						}
-						blockedInteraction = true;
-						enterAndExitBool = false;
-						StartCoroutine ("WaitToInteract");
-					} else {
-						currentDistanceTemp = Vector3.Distance (player.transform.position, vehicleCode.doorPosition[0].transform.position);
-						for (int x = 0; x < vehicleCode.doorPosition.Length; x++) {
-							proximityDistanceTemp = Vector3.Distance (player.transform.position, vehicleCode.doorPosition [x].transform.position);
-							if (proximityDistanceTemp < currentDistanceTemp) {
-								currentDistanceTemp = proximityDistanceTemp;
-							}
-						}
-						if (currentDistanceTemp < minDistance) {
-							vehicleCode.EnterInVehicle ();
-							if (player) {
-								player.SetActive (false);
-							}
-							blockedInteraction = true;
-							enterAndExitBool = false;
-							StartCoroutine ("WaitToInteract");
-						} else {
-							enterAndExitBool = false;
-						}
-					}
-				} else {
-					proximityObjectIndex = 0;
-					proximityDoorIndex = 0;
-					for (int x = 0; x < vehicles.Length; x++) {
-						controllerTemp = vehicles [x].GetComponent<MSVehicleControllerFree> ();
-
-						for (int y = 0; y < controllerTemp.doorPosition.Length; y++) {
-							currentDistanceTemp = Vector3.Distance (player.transform.position, controllerTemp.doorPosition[y].transform.position);
-							proximityDistanceTemp = Vector3.Distance (player.transform.position, vehicles [proximityObjectIndex].GetComponent<MSVehicleControllerFree> ().doorPosition[proximityDoorIndex].transform.position);
-							if (currentDistanceTemp < proximityDistanceTemp) {
-								proximityObjectIndex = x;
-								proximityDoorIndex = y;
-							}
-						}
-
-					}
-					
-					if (vehicleCode.isInsideTheCar) {
-						vehicleCode.ExitTheVehicle ();
-						if (player) {
-							player.SetActive (true);
-							if (vehicleCode.doorPosition[0].transform.position != vehicles [currentVehicle].transform.position) {
-								player.transform.position = vehicleCode.doorPosition[0].transform.position;
-							} else {
-								player.transform.position = vehicleCode.doorPosition[0].transform.position + Vector3.up * 3.0f;
-							}
-						}
-						blockedInteraction = true;
-						enterAndExitBool = false;
-						StartCoroutine ("WaitToInteract");
-					} else {
-						controllerTemp = vehicles [proximityObjectIndex].GetComponent<MSVehicleControllerFree> ();
-						proximityDistanceTemp = Vector3.Distance (player.transform.position, controllerTemp.doorPosition[0].transform.position);
-						for (int x = 0; x < controllerTemp.doorPosition.Length; x++) {
-							currentDistanceTemp = Vector3.Distance (player.transform.position, controllerTemp.doorPosition [x].transform.position);
-							if (currentDistanceTemp < proximityDistanceTemp) {
-								proximityDistanceTemp = currentDistanceTemp;
-							}
-						}
-						if (proximityDistanceTemp < minDistance) {
-							currentVehicle = proximityObjectIndex;
-							vehicles [currentVehicle].GetComponent<MSVehicleControllerFree> ().EnterInVehicle ();
-							if (player) {
-								player.SetActive (false);
-							}
-							blockedInteraction = true;
-							enterAndExitBool = false;
-							StartCoroutine ("WaitToInteract");
-						} else {
-							enterAndExitBool = false;
-						}
-					}
-				}
-			}
+			// Enter/Exit disabled - player always stays in car
+			
 			//
-			if (!playerIsNull) {
-				if (player.gameObject.activeInHierarchy) {
-					EnableUI (false);
-				} else {
-					EnableUI (UIVisualizer);
-				}
-			} else {
-				EnableUI (UIVisualizer);
-			}
+			// Always show UI since player is always in car
+			EnableUI (UIVisualizer);
 			//
 			if (vehicles.Length > 0 && currentVehicle < vehicles.Length && UIVisualizer && vehicleCode) {
 				if (vehicleCode.isInsideTheCar) {
