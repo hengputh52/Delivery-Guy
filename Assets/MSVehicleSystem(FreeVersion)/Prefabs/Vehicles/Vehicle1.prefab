@@ -1939,7 +1939,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1511026439631052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f4a8e0c40fb2cd4c8645029d0603d60, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f0180a98ca6dad4295f66d9237bfe9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doorPosition:

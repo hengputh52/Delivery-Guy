@@ -792,7 +792,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1417274621101168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5441a31e4f084e24abbeef96eaf41752, type: 3}
+  m_Script: {fileID: 11500000, guid: f2b36202fac56b54e833a74a0b7e90b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _verticalInput: Vertical
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1184846068105202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195d9fd3f4782364d84ef7637aae9107, type: 3}
+  m_Script: {fileID: 11500000, guid: 13a4e38f059578b4c9879fa76dbf5d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _joystickGraphic: {fileID: 224859280574842498}
@@ -977,7 +977,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1422609083717730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87953a8440df8d54c8d9db9b0ed38c59, type: 3}
+  m_Script: {fileID: 11500000, guid: af5c90d1078230147a86f52dede85541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonInput: 0
@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1803642609537790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87953a8440df8d54c8d9db9b0ed38c59, type: 3}
+  m_Script: {fileID: 11500000, guid: af5c90d1078230147a86f52dede85541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonInput: 0
@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1544390176873140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87953a8440df8d54c8d9db9b0ed38c59, type: 3}
+  m_Script: {fileID: 11500000, guid: af5c90d1078230147a86f52dede85541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonInput: 0
@@ -1463,7 +1463,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1946475752555374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87953a8440df8d54c8d9db9b0ed38c59, type: 3}
+  m_Script: {fileID: 11500000, guid: af5c90d1078230147a86f52dede85541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonInput: 0

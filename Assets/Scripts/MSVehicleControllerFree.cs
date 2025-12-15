@@ -481,7 +481,6 @@ public class MSVehicleControllerFree : MonoBehaviour {
 
 	void Awake(){
 		enableSkidMarksOnStart = true;
-		DebugStartErrors ();
 		SetCameras ();
 	}
 
@@ -506,9 +505,12 @@ public class MSVehicleControllerFree : MonoBehaviour {
 			}
 		}
 		if (!isOnTheList) {
-			Debug.LogError ("This vehicle can not be controlled because it is not associated with the vehicle list of the scene controller (object that has the 'MSSceneController' component).");
-			this.transform.gameObject.SetActive (false);
-			return;
+			// Auto-add this vehicle to the list if not present
+			var vehicleList = new List<GameObject>(controls.vehicles);
+			vehicleList.Add(this.gameObject);
+			controls.vehicles = vehicleList.ToArray();
+			isOnTheList = true;
+			Debug.Log("Auto-added vehicle to controller: " + this.gameObject.name);
 		}
 		//
 		if(!_wheels.rightFrontWheel.wheelCollider || !_wheels.leftFrontWheel.wheelCollider || !_wheels.rightRearWheel.wheelCollider || !_wheels.leftRearWheel.wheelCollider){
@@ -524,6 +526,7 @@ public class MSVehicleControllerFree : MonoBehaviour {
 	}
 
 	void Start(){
+		DebugStartErrors (); // Moved here so MSSceneControllerFree.Awake runs first
 		SetValues ();
 		if (skidMarksShader) {
 			if (enableSkidMarksOnStart) {
