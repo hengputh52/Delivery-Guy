@@ -6,6 +6,6 @@ public class StartGameScript : MonoBehaviour
     public void PlayGame()
     {
         // Load the LevelMenu scene as requested
-        SceneManager.LoadScene("LevelMenu");
+        SceneManager.LoadScene("GameScene_Level_1");
     }
 }
