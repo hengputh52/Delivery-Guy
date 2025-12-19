@@ -25,7 +25,8 @@ public class DeliveryPoint : MonoBehaviour
             if (deliveryIcon != null)
                 deliveryIcon.SetActive(false);
 
-            Deliver();
+            //Deliver();
+            GameManager.instance.DeliveryComplete();
         }
     }
     void Deliver()
