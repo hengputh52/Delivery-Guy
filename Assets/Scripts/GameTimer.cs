@@ -1,11 +1,11 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
     public float startTime = 60f;
     private float currentTime;
+    private bool isRunning = true;
 
     public TextMeshProUGUI timeText;
 
@@ -17,12 +17,15 @@ public class GameTimer : MonoBehaviour
 
     void Update()
     {
+        if (!isRunning) return;
+
         currentTime -= Time.deltaTime;
 
         if (currentTime <= 0)
         {
             currentTime = 0;
-            GameOver();
+            isRunning = false;
+            Debug.Log("Time Up!");
         }
 
         UpdateUI();
@@ -30,17 +33,16 @@ public class GameTimer : MonoBehaviour
 
     void UpdateUI()
     {
-        timeText.text = "Time: " + Mathf.Ceil(currentTime).ToString();
-    }
-
-    void GameOver()
-    {
-        Debug.Log("Time Up!");
-        //SceneManager.LoadScene("GameOverScene");
+        timeText.text = "Time: " + Mathf.Ceil(currentTime);
     }
 
     public void StopTimer()
     {
-        enabled = false;
+        isRunning = false;
+    }
+
+    public void ResumeTimer()
+    {
+        isRunning = true;
     }
 }

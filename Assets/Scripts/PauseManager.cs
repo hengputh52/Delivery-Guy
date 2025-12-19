@@ -4,26 +4,21 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     public GameObject pausePanel;
+    public GameTimer gameTimer;
+    public AITruckController[] aiTrucks;
+
     private bool isPaused = false;
 
     void Start()
     {
-        Debug.Log("PauseManager started!");
-        
-        // Make sure pause panel is hidden at start
-        if (pausePanel != null)
-        {
-            pausePanel.SetActive(false);
-        }
-        else
-        {
-            Debug.LogError("Pause Panel not assigned! Drag it in the Inspector.");
-        }
+        pausePanel.SetActive(false);
+
+        // Automatically find all AITruckController instances in the scene
+        aiTrucks = FindObjectsOfType<AITruckController>();
     }
 
     void Update()
     {
-        // Also allow ESC key to pause
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
@@ -32,8 +27,6 @@ public class PauseManager : MonoBehaviour
 
     public void TogglePause()
     {
-        Debug.Log("TogglePause called! isPaused: " + isPaused);
-        
         if (isPaused)
             ResumeGame();
         else
@@ -42,29 +35,36 @@ public class PauseManager : MonoBehaviour
 
     public void PauseGame()
     {
-        Debug.Log("Game Paused!");
-        
-        if (pausePanel != null)
-            pausePanel.SetActive(true);
-            
+        pausePanel.SetActive(true);
         Time.timeScale = 0f;
+
+        gameTimer.StopTimer();
+
+        foreach (AITruckController ai in aiTrucks)
+        {
+            ai.PauseAI();
+        }
+
         isPaused = true;
     }
 
     public void ResumeGame()
     {
-        Debug.Log("Game Resumed!");
-        
-        if (pausePanel != null)
-            pausePanel.SetActive(false);
-            
+        pausePanel.SetActive(false);
         Time.timeScale = 1f;
+
+        gameTimer.ResumeTimer();
+
+        foreach (AITruckController ai in aiTrucks)
+        {
+            ai.ResumeAI();
+        }
+
         isPaused = false;
     }
 
     public void BackToMenu()
     {
-        Debug.Log("Returning to Main Menu...");
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
