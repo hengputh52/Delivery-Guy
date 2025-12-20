@@ -14098,6 +14098,7 @@ MonoBehaviour:
   pausePanel: {fileID: 712864010}
   gameTimer: {fileID: 1009267368}
   aiTrucks: []
+  playerCar: {fileID: 5058478842540355057}
 --- !u!1001 &1464464253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20555,6 +20556,17 @@ MonoBehaviour:
   penaltyTime: 3
   hitCooldown: 1
   crashSound: {fileID: 0}
+--- !u!114 &5058478842540355057 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2409516089257615207, guid: 22423efc65ce45240a3d71deb72ce705, type: 3}
+  m_PrefabInstance: {fileID: 5058478842540355054}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171838426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0180a98ca6dad4295f66d9237bfe9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5121258889201612317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5121258889201612317, guid: 5d32668dd4a79d24ab029c5e75ccd9ad, type: 3}

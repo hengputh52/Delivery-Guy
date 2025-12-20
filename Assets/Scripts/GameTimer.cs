@@ -8,6 +8,7 @@ public class GameTimer : MonoBehaviour
     private bool isRunning = true;
 
     public TextMeshProUGUI timeText;
+    public ResultUI resultUI; // Assign in Inspector
 
     void Start()
     {
@@ -26,6 +27,8 @@ public class GameTimer : MonoBehaviour
             currentTime = 0;
             isRunning = false;
             Debug.Log("Time Up!");
+            if (resultUI != null)
+                resultUI.ShowResult(false, 0); // Show failed result
         }
 
         UpdateUI();
@@ -44,5 +47,13 @@ public class GameTimer : MonoBehaviour
     public void ResumeTimer()
     {
         isRunning = true;
+    }
+
+    // Call this when delivery is completed
+    public void OnDeliveryComplete()
+    {
+        if (resultUI != null)
+            resultUI.ShowResult(true, currentTime); // Show success result
+        StopTimer();
     }
 }

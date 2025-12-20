@@ -13,7 +13,7 @@ public class ResultUI : MonoBehaviour
         gameObject.SetActive(true);
         Time.timeScale = 0;
 
-        titleText.text = success ? "DELIVERY SUCCESS!" : "DELIVERY FAILED";
+        titleText.text = success ? "DELIVERY SUCCESS!" : "DELIVERY FAILED : Time is Up";
         timeText.text = "Time Left: " + Mathf.Round(timeLeft);
     }
 

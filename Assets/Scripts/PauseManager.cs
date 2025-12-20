@@ -6,6 +6,7 @@ public class PauseManager : MonoBehaviour
     public GameObject pausePanel;
     public GameTimer gameTimer;
     public AITruckController[] aiTrucks;
+    public MSVehicleControllerFree playerCar;
 
     private bool isPaused = false;
 
@@ -45,6 +46,9 @@ public class PauseManager : MonoBehaviour
             ai.PauseAI();
         }
 
+        if (playerCar != null)
+            playerCar.PauseCar();
+
         isPaused = true;
     }
 
@@ -59,6 +63,9 @@ public class PauseManager : MonoBehaviour
         {
             ai.ResumeAI();
         }
+
+        if (playerCar != null)
+            playerCar.ResumeCar();
 
         isPaused = false;
     }
