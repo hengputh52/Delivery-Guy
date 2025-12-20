@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2371059229931884553
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1202064416829428, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
+      propertyPath: m_Name
+      value: Vehicle2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249441627662440, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409305018785068, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1944933316882566, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372090507005404, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372090507005404, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372090507005404, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372090507005404, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372090507005404, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00000058114523
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372090507005404, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372090507005404, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372090507005404, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4a7e1a08d504784ba863438fe3772d8, type: 3}
