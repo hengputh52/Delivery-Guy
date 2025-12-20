@@ -479,6 +479,21 @@ public class MSVehicleControllerFree : MonoBehaviour {
 
 	MSSceneControllerFree controls;
 
+	private bool isPaused = false;
+
+	public void PauseCar()
+	{
+		isPaused = true;
+		Rigidbody rb = GetComponent<Rigidbody>();
+    	if (rb != null)
+        rb.velocity = Vector3.zero;
+	}
+
+	public void ResumeCar()
+	{
+		isPaused = false;
+	}
+
 	void Awake(){
 		enableSkidMarksOnStart = true;
 		SetCameras ();
@@ -973,6 +988,7 @@ public class MSVehicleControllerFree : MonoBehaviour {
 	}
 
 	void Update(){
+		if(isPaused) return;
 
 		wheelFDIsGrounded = _wheels.rightFrontWheel.wheelCollider.isGrounded;
 		wheelFEIsGrounded = _wheels.leftFrontWheel.wheelCollider.isGrounded;
@@ -1031,6 +1047,8 @@ public class MSVehicleControllerFree : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
+
+		if(isPaused) return;
 		ApplyTorque ();
 		Brakes ();
 		if (isInsideTheCar) {
