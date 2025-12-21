@@ -7,6 +7,6 @@ public class MainMenuManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Loading Level Menu...");
-        SceneManager.LoadScene("Game Scene_level_1");
+        SceneManager.LoadScene("LevelSelection");
     }
 }
