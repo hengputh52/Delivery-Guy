@@ -10418,6 +10418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 60
   timeText: {fileID: 776239593}
+  resultUI: {fileID: 0}
 --- !u!1 &1015407342
 GameObject:
   m_ObjectHideFlags: 0
@@ -20173,6 +20174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instructionText: {fileID: 1832392806}
+  gameTimer: {fileID: 0}
 --- !u!1 &2145385422
 GameObject:
   m_ObjectHideFlags: 0
