@@ -6,12 +6,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Vehicle"))
         {
-            Debug.Log("Player hit AI car!");
-
-            if (PoliceManager.Instance != null)
-            {
-                PoliceManager.Instance.StartChase();
-            }
+            PoliceManager.Instance?.StartChase();
         }
     }
 }

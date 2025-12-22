@@ -1,27 +1,87 @@
 using UnityEngine;
+using TMPro;
 
 public class PoliceManager : MonoBehaviour
 {
     public static PoliceManager Instance;
 
-    public PoliceFollow policeCar;
+    [Header("Police")]
+    public PoliceFollow[] policeCars;
     public Transform player;
+
+    [Header("Catch Settings")]
+    public float catchDistance = 2f;
+    public float catchTime = 3f;
+
+    [Header("UI")]
+    public TextMeshProUGUI policeWarningText;
+
+    private bool chaseActive = false;
+    private float catchTimer = 0f;
 
     void Awake()
     {
-        if (Instance == null)
-            Instance = this;
+        Instance = this;
+    }
+
+    void Start()
+    {
+        policeWarningText.gameObject.SetActive(false);
+
+        foreach (var police in policeCars)
+            police.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (!chaseActive) return;
+
+        bool policeClose = false;
+
+        foreach (var police in policeCars)
+        {
+            float dist = Vector3.Distance(police.transform.position, player.position);
+            if (dist <= catchDistance)
+            {
+                policeClose = true;
+                break;
+            }
+        }
+
+        if (policeClose)
+        {
+            catchTimer += Time.deltaTime;
+
+            if (catchTimer >= catchTime)
+                PlayerCaught();
+        }
         else
-            Destroy(gameObject);
+        {
+            catchTimer = 0f;
+        }
     }
 
     public void StartChase()
     {
-        if (policeCar == null || player == null) return;
+        if (chaseActive) return;
 
-        policeCar.gameObject.SetActive(true);
-        policeCar.StartChase(player);
+        chaseActive = true;
+        policeWarningText.gameObject.SetActive(true);
 
-        Debug.Log("Police chase started!");
+        foreach (var police in policeCars)
+        {
+            police.gameObject.SetActive(true);
+            police.StartChase(player);
+        }
+
+        DeliveryManager.Instance?.SetPoliceChaseInstruction();
+    }
+
+    void PlayerCaught()
+    {
+        Time.timeScale = 0f;
+        policeWarningText.text = "YOU WERE CAUGHT!";
+
+        DeliveryManager.Instance?.SetLoseInstruction();
     }
 }
