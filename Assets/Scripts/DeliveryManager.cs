@@ -22,9 +22,9 @@ public class DeliveryManager : MonoBehaviour
     void Start()
     {
         Debug.Log("Start game is called");
-        SetNormalInstruction();
+        //SetNormalInstruction();
         
-        //instructionText.text = "📦 Deliver the package to the target!";
+        instructionText.text = "Deliver the package to the target!";
 
     }
 
@@ -35,25 +35,25 @@ public class DeliveryManager : MonoBehaviour
     public void SetNormalInstruction()
     {
         instructionText.text = "Deliver the package to the target!";
-        instructionText.color = Color.black;
+        //instructionText.color = Color.white;
     }
 
     public void SetPoliceChaseInstruction()
     {
         instructionText.text = "POLICE CHASING YOU! DELIVER FAST!";
-        instructionText.color = Color.red;
+        //instructionText.color = Color.red;
     }
 
     public void SetLoseInstruction()
     {
         instructionText.text = "YOU WERE CAUGHT BY POLICE";
-        instructionText.color = Color.red;
+        //instructionText.color = Color.red;
     }
 
     public void SetWinInstruction()
     {
         instructionText.text = "DELIVERY COMPLETED!";
-        instructionText.color = Color.green;
+        //instructionText.color = Color.green;
     }
 
     // =========================
