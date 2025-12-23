@@ -3,7 +3,7 @@ using UnityEngine;
 public class PoliceFollow : MonoBehaviour
 {
     private Transform player;
-    public float speed = 0.01f;
+    public float speed = 0.001f;
     public float rotationSpeed = 3f;
     public float stopDistance = 2.5f;
 
@@ -40,14 +40,6 @@ public class PoliceFollow : MonoBehaviour
             if (directionToPlayer.magnitude > 0.01f)
             {
                 targetDirection = directionToPlayer;
-
-                // Smooth rotation toward player
-                Quaternion targetRot = Quaternion.LookRotation(directionToPlayer);
-                transform.rotation = Quaternion.Slerp(
-                    transform.rotation,
-                    targetRot,
-                    rotationSpeed * Time.deltaTime
-                );
             }
         }
         else
@@ -60,9 +52,20 @@ public class PoliceFollow : MonoBehaviour
     {
         if (!isChasing || targetDirection.magnitude < 0.01f) return;
 
-        // Simple kinematic movement - just move the transform directly
+        // Move the transform
         Vector3 newPosition = transform.position + (targetDirection * speed * Time.fixedDeltaTime);
         transform.position = newPosition;
+
+        // Rotate to face movement direction
+        if (targetDirection.magnitude > 0.01f)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(targetDirection);
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                targetRot,
+                rotationSpeed * Time.fixedDeltaTime
+            );
+        }
     }
 
     public void StartChase(Transform target)
