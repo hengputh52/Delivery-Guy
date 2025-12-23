@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour
 {
@@ -10,9 +11,18 @@ public class GameTimer : MonoBehaviour
     public TextMeshProUGUI timeText;
     public ResultUI resultUI; // Assign in Inspector
 
+    public Image timeIcon;
+    private Animator anim;
+
+
+
     void Start()
     {
         currentTime = startTime;
+        if(timeIcon != null)
+        {
+            anim = timeIcon.GetComponent<Animator>();
+        }
         UpdateUI();
     }
 
@@ -22,6 +32,11 @@ public class GameTimer : MonoBehaviour
 
         currentTime -= Time.deltaTime;
 
+        if(currentTime <= 10f && anim != null)
+        {
+            anim.SetTrigger("LowTime");
+            anim.SetTrigger("LowerTime");
+        }
         if (currentTime <= 0)
         {
             currentTime = 0;
