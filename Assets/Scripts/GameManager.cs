@@ -1,63 +1,80 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     // Singleton (global access)
     public static GameManager instance;
 
-    [Header("Time Settings")]
-    public float startTime = 120f;
-    public float timeRemaining;
-    private bool gameEnded = false;
+    public enum GameResult
+    {
+        None,
+        Win,
+        Lose
+    }
 
-    [Header("UI")]
-    public ResultUI resultUI;
-    public TimeUI timeUI;
+    [Header("Persistent Game State")]
+    public GameResult result = GameResult.None;
+    public int score = 0;
+    public string currentLevelSceneName = string.Empty;
 
     void Awake()
     {
         // Singleton pattern
         if (instance == null)
+        {
             instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            // Track active scene changes to remember last gameplay scene
+            SceneManager.activeSceneChanged += OnActiveSceneChanged;
+        }
         else
+        {
             Destroy(gameObject);
+        }
     }
 
-    void Start()
+    void OnDestroy()
     {
-        timeRemaining = startTime;
-        Time.timeScale = 1;
+        SceneManager.activeSceneChanged -= OnActiveSceneChanged;
     }
 
-    void Update()
-{
-    timeRemaining -= Time.deltaTime;
-
-    if (timeRemaining <= 0)
+    // Remember the last non-GameOver scene as the current level
+    private void OnActiveSceneChanged(Scene previous, Scene next)
     {
-        resultUI.ShowResult(false, 0);
-        enabled = false;
-    }
-}
-
-    // Called when player hits obstacle
-    public void ReduceTime(float amount)
-    {
-        timeRemaining -= amount;
-        if (timeRemaining < 0)
-            timeRemaining = 0;
+        if (next.name != "GameOver")
+        {
+            currentLevelSceneName = next.name;
+        }
     }
 
-    // Called when delivery is completed
-   public void DeliveryComplete()
+    // Public API for reporting outcomes from gameplay
+    public void ReportWin(int points)
     {
-        resultUI.ShowResult(true, timeRemaining);
+        result = GameResult.Win;
+        score = points;
+        LoadGameOverScene();
     }
 
-    void EndGame(bool success)
+    public void ReportLose(int points)
     {
-        gameEnded = true;
-        Time.timeScale = 0;
-        resultUI.ShowResult(success, timeRemaining);
+        result = GameResult.Lose;
+        score = points;
+        LoadGameOverScene();
+    }
+
+    public void DeliveryComplete()
+    {
+        // Backward-compatible hook for existing calls
+        // Default score: 10 points (example) — adjust if you have a scoring system
+        ReportWin(score > 0 ? score : 10);
+    }
+
+    public void LoadGameOverScene()
+    {
+        Debug.Log($"Loading GameOver scene... Result: {result}, Score: {score}");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("GameOver");
     }
 }

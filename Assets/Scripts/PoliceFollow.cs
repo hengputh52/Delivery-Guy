@@ -66,6 +66,12 @@ public class PoliceFollow : MonoBehaviour
                 rotationSpeed * Time.fixedDeltaTime
             );
         }
+        else
+        {
+            // Player caught
+            Debug.Log("Player caught by police!");
+            Time.timeScale = 0f;
+        }
     }
 
     public void StartChase(Transform target)

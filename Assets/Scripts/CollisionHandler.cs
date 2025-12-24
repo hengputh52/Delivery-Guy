@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -13,11 +14,18 @@ public class CollisionHandler : MonoBehaviour
         if (Time.time - lastHitTime < hitCooldown)
             return;
 
-        if (collision.gameObject.CompareTag("Obstacle") )
+        if (collision.gameObject.CompareTag("Obstacle"))
         {
             lastHitTime = Time.time;
 
-            GameManager.instance.ReduceTime(penaltyTime);
+            // Obstacle hit - lose
+            lastHitTime = Time.time;
+
+            GameOverUIController.isWin = false;
+            GameOverUIController.score = 0;
+            GameOverUIController.lastLevelName = SceneManager.GetActiveScene().name;
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("GameOver");
 
             if (crashSound != null)
                 crashSound.Play();

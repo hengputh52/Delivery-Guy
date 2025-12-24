@@ -12,7 +12,8 @@ public class PauseManager : MonoBehaviour
 
     void Start()
     {
-        pausePanel.SetActive(false);
+        if (pausePanel != null)
+            pausePanel.SetActive(false);
 
         // Automatically find all AITruckController instances in the scene
         aiTrucks = FindObjectsOfType<AITruckController>();
@@ -36,10 +37,13 @@ public class PauseManager : MonoBehaviour
 
     public void PauseGame()
     {
-        pausePanel.SetActive(true);
+        if (pausePanel != null)
+            pausePanel.SetActive(true);
+
         Time.timeScale = 0f;
 
-        gameTimer.StopTimer();
+        if (gameTimer != null)
+            gameTimer.StopTimer();
 
         foreach (AITruckController ai in aiTrucks)
         {
@@ -54,10 +58,13 @@ public class PauseManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        pausePanel.SetActive(false);
+        if (pausePanel != null)
+            pausePanel.SetActive(false);
+
         Time.timeScale = 1f;
 
-        gameTimer.ResumeTimer();
+        if (gameTimer != null)
+            gameTimer.ResumeTimer();
 
         foreach (AITruckController ai in aiTrucks)
         {
@@ -70,9 +77,9 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
     }
 
-    public void BackToMenu()
+    public void BackToLevel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("LevelSelection");
     }
 }

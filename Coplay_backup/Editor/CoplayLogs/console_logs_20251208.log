@@ -1,0 +1,234 @@
+2025-12-08 14:32:28.372 +07:00 [INF] Initializing Coplay services
+2025-12-08 14:32:28.754 +07:00 [DBG] Found 1 glTF importer(s), no conflict detected
+2025-12-08 14:32:28.758 +07:00 [INF] Initializing EditorThreadHelper
+2025-12-08 14:32:28.758 +07:00 [INF] EditorThreadHelper initialized successfully
+2025-12-08 14:32:28.782 +07:00 [INF] Enabling console error detection
+2025-12-08 14:32:28.795 +07:00 [INF] ConsoleDebugButtonService initializing
+2025-12-08 14:32:28.801 +07:00 [INF] ConsoleDebugButtonService initialized
+2025-12-08 14:32:31.448 +07:00 [INF] No existing action records JSON file found.
+2025-12-08 14:32:36.279 +07:00 [INF] Subscribed to error detection
+2025-12-08 14:32:36.304 +07:00 [INF] Found 4 startup errors via direct console query - caching for downstream use
+2025-12-08 14:32:36.350 +07:00 [DBG] Cannot update visibility - UI elements are null
+2025-12-08 14:32:37.195 +07:00 [DBG] Cannot update visibility - UI elements are null
+2025-12-08 14:33:10.456 +07:00 [INF] Initializing Coplay services
+2025-12-08 14:33:10.896 +07:00 [DBG] Found 1 glTF importer(s), no conflict detected
+2025-12-08 14:33:10.897 +07:00 [INF] Initializing EditorThreadHelper
+2025-12-08 14:33:10.898 +07:00 [INF] EditorThreadHelper initialized successfully
+2025-12-08 14:33:10.917 +07:00 [INF] Enabling console error detection
+2025-12-08 14:33:10.926 +07:00 [INF] ConsoleDebugButtonService initializing
+2025-12-08 14:33:10.929 +07:00 [INF] ConsoleDebugButtonService initialized
+2025-12-08 14:34:07.419 +07:00 [INF] Subscribed to error detection
+2025-12-08 14:34:09.236 +07:00 [INF] No startup errors found after delayed check
+2025-12-08 14:34:09.247 +07:00 [DBG] Cannot update visibility - UI elements are null
+2025-12-08 14:34:21.741 +07:00 [INF] Found git repository in parent at C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy
+2025-12-08 14:34:21.754 +07:00 [INF] No existing action records JSON file found.
+2025-12-08 14:34:21.770 +07:00 [INF] No state file found, maintaining Initialized state for fresh installation
+2025-12-08 14:34:21.787 +07:00 [INF] No request found, returning empty.
+2025-12-08 14:34:21.801 +07:00 [INF] No MCP servers configuration found
+2025-12-08 14:34:21.802 +07:00 [INF] MCP host initialized
+2025-12-08 14:34:21.824 +07:00 [INF] Context file not found: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\CoplayLogs\context_items.json
+2025-12-08 14:34:21.824 +07:00 [INF] Checking for dependencies in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 14:34:21.824 +07:00 [INF] Ripgrep directory not found
+2025-12-08 14:34:21.824 +07:00 [INF] RunInBackgroundStartupTask initialized - will enable background execution in play mode
+2025-12-08 14:34:21.856 +07:00 [INF] Checking for dependencies in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 14:34:21.856 +07:00 [INF] Ripgrep directory not found
+2025-12-08 14:34:21.857 +07:00 [INF] Showing dependency download screen
+2025-12-08 14:34:27.464 +07:00 [INF] Creating Binaries directory at: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 14:34:56.476 +07:00 [INF] Checking for executable in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries\ripgrep\x86_64
+2025-12-08 14:34:56.476 +07:00 [INF] Looking for executable at: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries\ripgrep\x86_64\rg.exe
+2025-12-08 14:34:56.476 +07:00 [INF] Set executable permissions successfully
+2025-12-08 14:34:56.616 +07:00 [INF] Dependency installation completed successfully
+2025-12-08 14:35:02.215 +07:00 [INF] Successfully got device ID: cpl-device-ef36718b-1058-4c26-9369-ea7e7d42865c
+2025-12-08 14:37:03.426 +07:00 [WRN] No refresh token found
+2025-12-08 14:37:03.428 +07:00 [WRN] Unauthorized access to subscription endpoint
+2025-12-08 14:45:10.010 +07:00 [INF] Placeholder text would be: What can I help with?
+2025-12-08 14:45:10.016 +07:00 [INF] Loading threads
+2025-12-08 14:45:10.020 +07:00 [INF] Successfully logged in
+2025-12-08 14:45:10.820 +07:00 [INF] Creating thread
+2025-12-08 14:45:10.820 +07:00 [INF] No current thread to save checkpoint hashes from
+2025-12-08 14:45:11.245 +07:00 [INF] Loading thread messages for thread cpl_thread_c028ae21_8e32_470b_b8ea_c3213d4516fe
+2025-12-08 14:45:11.247 +07:00 [INF] Saving state
+2025-12-08 14:45:11.374 +07:00 [INF] Clearing state model
+2025-12-08 14:45:11.374 +07:00 [WRN] You are setting to the same state: Initialized
+2025-12-08 14:45:11.379 +07:00 [INF] OnThreadChanged
+2025-12-08 14:45:11.379 +07:00 [INF] Handling state change: Initialized
+2025-12-08 14:48:46.644 +07:00 [DBG] Stored original runInBackground value: True
+2025-12-08 14:48:47.017 +07:00 [INF] Deinitializing Coplay services
+2025-12-08 14:48:47.019 +07:00 [INF] ConsoleDebugButtonService disposing
+2025-12-08 14:48:47.020 +07:00 [INF] Unsubscribed from error detection
+2025-12-08 14:48:47.033 +07:00 [INF] EditorThreadHelper disposed
+2025-12-08 14:48:49.050 +07:00 [INF] Initializing Coplay services
+2025-12-08 14:48:49.379 +07:00 [DBG] Found 1 glTF importer(s), no conflict detected
+2025-12-08 14:48:49.381 +07:00 [INF] Initializing EditorThreadHelper
+2025-12-08 14:48:49.381 +07:00 [INF] EditorThreadHelper initialized successfully
+2025-12-08 14:48:49.395 +07:00 [INF] Enabling console error detection
+2025-12-08 14:48:49.403 +07:00 [INF] ConsoleDebugButtonService initializing
+2025-12-08 14:48:49.408 +07:00 [INF] ConsoleDebugButtonService initialized
+2025-12-08 14:48:54.728 +07:00 [INF] Subscribed to error detection
+2025-12-08 14:48:54.744 +07:00 [INF] No startup errors found after delayed check
+2025-12-08 14:48:54.755 +07:00 [DBG] Cannot update visibility - UI elements are null
+2025-12-08 14:49:21.908 +07:00 [INF] No existing action records JSON file found.
+2025-12-08 14:49:21.938 +07:00 [INF] Loading state from file, and setting to: Initialized
+2025-12-08 14:49:21.955 +07:00 [INF] No request found, returning empty.
+2025-12-08 14:49:21.970 +07:00 [INF] No MCP servers configuration found
+2025-12-08 14:49:21.970 +07:00 [INF] MCP host initialized
+2025-12-08 14:49:21.976 +07:00 [INF] Loaded 0 scroll positions from disk
+2025-12-08 14:49:21.996 +07:00 [INF] Context file not found: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\CoplayLogs\context_items.json
+2025-12-08 14:49:21.997 +07:00 [INF] Checking for dependencies in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 14:49:21.997 +07:00 [INF] Executable at C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries\ripgrep\x86_64\rg.exe exists: True
+2025-12-08 14:49:22.001 +07:00 [INF] RunInBackgroundStartupTask initialized - will enable background execution in play mode
+2025-12-08 14:49:22.020 +07:00 [INF] Checking for dependencies in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 14:49:22.020 +07:00 [INF] Executable at C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries\ripgrep\x86_64\rg.exe exists: True
+2025-12-08 14:49:22.116 +07:00 [INF] Placeholder text would be: What can I help with?
+2025-12-08 14:49:22.122 +07:00 [INF] Loading threads state
+2025-12-08 14:49:22.180 +07:00 [INF] Loading thread messages for thread cpl_thread_c028ae21_8e32_470b_b8ea_c3213d4516fe
+2025-12-08 14:49:22.183 +07:00 [INF] Saving state
+2025-12-08 14:49:22.215 +07:00 [INF] Clearing state model
+2025-12-08 14:49:22.215 +07:00 [WRN] You are setting to the same state: Initialized
+2025-12-08 14:49:22.220 +07:00 [INF] OnThreadChanged
+2025-12-08 14:49:22.220 +07:00 [INF] Handling state change: Initialized
+2025-12-08 14:55:49.558 +07:00 [DBG] Stored original runInBackground value: True
+2025-12-08 14:55:49.943 +07:00 [INF] Deinitializing Coplay services
+2025-12-08 14:55:49.943 +07:00 [INF] ConsoleDebugButtonService disposing
+2025-12-08 14:55:49.946 +07:00 [INF] Unsubscribed from error detection
+2025-12-08 14:55:49.956 +07:00 [INF] EditorThreadHelper disposed
+2025-12-08 14:55:51.880 +07:00 [INF] Initializing Coplay services
+2025-12-08 14:55:52.199 +07:00 [DBG] Found 1 glTF importer(s), no conflict detected
+2025-12-08 14:55:52.202 +07:00 [INF] Initializing EditorThreadHelper
+2025-12-08 14:55:52.202 +07:00 [INF] EditorThreadHelper initialized successfully
+2025-12-08 14:55:52.215 +07:00 [INF] Enabling console error detection
+2025-12-08 14:55:52.223 +07:00 [INF] ConsoleDebugButtonService initializing
+2025-12-08 14:55:52.227 +07:00 [INF] ConsoleDebugButtonService initialized
+2025-12-08 14:55:53.536 +07:00 [INF] No existing action records JSON file found.
+2025-12-08 14:55:53.565 +07:00 [INF] Loading state from file, and setting to: Initialized
+2025-12-08 14:55:53.582 +07:00 [INF] No request found, returning empty.
+2025-12-08 14:55:53.598 +07:00 [INF] No MCP servers configuration found
+2025-12-08 14:55:53.598 +07:00 [INF] MCP host initialized
+2025-12-08 14:55:53.602 +07:00 [INF] Loaded 0 scroll positions from disk
+2025-12-08 14:55:53.633 +07:00 [INF] Checking for dependencies in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 14:55:53.634 +07:00 [INF] Executable at C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries\ripgrep\x86_64\rg.exe exists: True
+2025-12-08 14:55:53.638 +07:00 [INF] RunInBackgroundStartupTask initialized - will enable background execution in play mode
+2025-12-08 14:55:56.877 +07:00 [INF] Subscribed to error detection
+2025-12-08 14:55:56.892 +07:00 [INF] No startup errors found after delayed check
+2025-12-08 14:55:56.901 +07:00 [DBG] Cannot update visibility - UI elements are null
+2025-12-08 14:55:57.467 +07:00 [INF] Checking for dependencies in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 14:55:57.468 +07:00 [INF] Executable at C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries\ripgrep\x86_64\rg.exe exists: True
+2025-12-08 14:55:57.548 +07:00 [INF] Placeholder text would be: What can I help with?
+2025-12-08 14:55:57.557 +07:00 [INF] Loading threads state
+2025-12-08 14:55:57.603 +07:00 [INF] Loading thread messages for thread cpl_thread_c028ae21_8e32_470b_b8ea_c3213d4516fe
+2025-12-08 14:55:57.606 +07:00 [INF] Saving state
+2025-12-08 14:55:57.673 +07:00 [INF] Clearing state model
+2025-12-08 14:55:57.673 +07:00 [WRN] You are setting to the same state: Initialized
+2025-12-08 14:55:57.677 +07:00 [INF] OnThreadChanged
+2025-12-08 14:55:57.677 +07:00 [INF] Handling state change: Initialized
+2025-12-08 14:56:45.946 +07:00 [DBG] Restored Application.runInBackground to original value: True
+2025-12-08 14:56:47.691 +07:00 [DBG] Stored original runInBackground value: True
+2025-12-08 14:56:47.766 +07:00 [INF] Deinitializing Coplay services
+2025-12-08 14:56:47.767 +07:00 [INF] ConsoleDebugButtonService disposing
+2025-12-08 14:56:47.769 +07:00 [INF] Unsubscribed from error detection
+2025-12-08 14:56:47.781 +07:00 [INF] EditorThreadHelper disposed
+2025-12-08 14:56:49.818 +07:00 [INF] Initializing Coplay services
+2025-12-08 14:56:50.144 +07:00 [DBG] Found 1 glTF importer(s), no conflict detected
+2025-12-08 14:56:50.145 +07:00 [INF] Initializing EditorThreadHelper
+2025-12-08 14:56:50.145 +07:00 [INF] EditorThreadHelper initialized successfully
+2025-12-08 14:56:50.159 +07:00 [INF] Enabling console error detection
+2025-12-08 14:56:50.167 +07:00 [INF] ConsoleDebugButtonService initializing
+2025-12-08 14:56:50.171 +07:00 [INF] ConsoleDebugButtonService initialized
+2025-12-08 14:56:51.531 +07:00 [INF] Loading state from file, and setting to: Initialized
+2025-12-08 14:56:51.550 +07:00 [INF] No request found, returning empty.
+2025-12-08 14:56:51.566 +07:00 [INF] No MCP servers configuration found
+2025-12-08 14:56:51.566 +07:00 [INF] MCP host initialized
+2025-12-08 14:56:51.570 +07:00 [INF] Loaded 0 scroll positions from disk
+2025-12-08 14:56:51.598 +07:00 [INF] Checking for dependencies in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 14:56:51.600 +07:00 [INF] Executable at C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries\ripgrep\x86_64\rg.exe exists: True
+2025-12-08 14:56:51.603 +07:00 [INF] RunInBackgroundStartupTask initialized - will enable background execution in play mode
+2025-12-08 14:56:54.891 +07:00 [INF] Subscribed to error detection
+2025-12-08 14:56:54.905 +07:00 [INF] No startup errors found after delayed check
+2025-12-08 14:56:54.916 +07:00 [DBG] Cannot update visibility - UI elements are null
+2025-12-08 14:56:55.430 +07:00 [INF] Checking for dependencies in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 14:56:55.430 +07:00 [INF] Executable at C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries\ripgrep\x86_64\rg.exe exists: True
+2025-12-08 14:56:55.521 +07:00 [INF] Placeholder text would be: What can I help with?
+2025-12-08 14:56:55.531 +07:00 [INF] Loading threads state
+2025-12-08 14:56:55.579 +07:00 [INF] Loading thread messages for thread cpl_thread_c028ae21_8e32_470b_b8ea_c3213d4516fe
+2025-12-08 14:56:55.582 +07:00 [INF] Saving state
+2025-12-08 14:56:55.657 +07:00 [INF] Clearing state model
+2025-12-08 14:56:55.657 +07:00 [WRN] You are setting to the same state: Initialized
+2025-12-08 14:56:55.661 +07:00 [INF] OnThreadChanged
+2025-12-08 14:56:55.661 +07:00 [INF] Handling state change: Initialized
+2025-12-08 14:57:50.107 +07:00 [DBG] Restored Application.runInBackground to original value: True
+2025-12-08 14:57:51.337 +07:00 [DBG] Stored original runInBackground value: True
+2025-12-08 14:57:51.414 +07:00 [INF] Deinitializing Coplay services
+2025-12-08 14:57:51.416 +07:00 [INF] ConsoleDebugButtonService disposing
+2025-12-08 14:57:51.417 +07:00 [INF] Unsubscribed from error detection
+2025-12-08 14:57:51.430 +07:00 [INF] EditorThreadHelper disposed
+2025-12-08 14:57:53.479 +07:00 [INF] Initializing Coplay services
+2025-12-08 14:57:53.802 +07:00 [DBG] Found 1 glTF importer(s), no conflict detected
+2025-12-08 14:57:53.804 +07:00 [INF] Initializing EditorThreadHelper
+2025-12-08 14:57:53.804 +07:00 [INF] EditorThreadHelper initialized successfully
+2025-12-08 14:57:53.817 +07:00 [INF] Enabling console error detection
+2025-12-08 14:57:53.826 +07:00 [INF] ConsoleDebugButtonService initializing
+2025-12-08 14:57:53.831 +07:00 [INF] ConsoleDebugButtonService initialized
+2025-12-08 14:57:55.193 +07:00 [INF] Loading state from file, and setting to: Initialized
+2025-12-08 14:57:55.212 +07:00 [INF] No request found, returning empty.
+2025-12-08 14:57:55.229 +07:00 [INF] No MCP servers configuration found
+2025-12-08 14:57:55.229 +07:00 [INF] MCP host initialized
+2025-12-08 14:57:55.233 +07:00 [INF] Loaded 0 scroll positions from disk
+2025-12-08 14:57:55.262 +07:00 [INF] Checking for dependencies in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 14:57:55.262 +07:00 [INF] Executable at C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries\ripgrep\x86_64\rg.exe exists: True
+2025-12-08 14:57:55.267 +07:00 [INF] RunInBackgroundStartupTask initialized - will enable background execution in play mode
+2025-12-08 14:57:58.415 +07:00 [INF] Subscribed to error detection
+2025-12-08 14:57:58.429 +07:00 [INF] No startup errors found after delayed check
+2025-12-08 14:57:58.439 +07:00 [DBG] Cannot update visibility - UI elements are null
+2025-12-08 14:57:59.039 +07:00 [INF] Checking for dependencies in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 14:57:59.040 +07:00 [INF] Executable at C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries\ripgrep\x86_64\rg.exe exists: True
+2025-12-08 14:57:59.127 +07:00 [INF] Placeholder text would be: What can I help with?
+2025-12-08 14:57:59.136 +07:00 [INF] Loading threads state
+2025-12-08 14:57:59.184 +07:00 [INF] Loading thread messages for thread cpl_thread_c028ae21_8e32_470b_b8ea_c3213d4516fe
+2025-12-08 14:57:59.187 +07:00 [INF] Saving state
+2025-12-08 14:57:59.255 +07:00 [INF] Clearing state model
+2025-12-08 14:57:59.255 +07:00 [WRN] You are setting to the same state: Initialized
+2025-12-08 14:57:59.259 +07:00 [INF] OnThreadChanged
+2025-12-08 14:57:59.260 +07:00 [INF] Handling state change: Initialized
+2025-12-08 15:01:07.771 +07:00 [DBG] Restored Application.runInBackground to original value: True
+2025-12-08 15:04:35.059 +07:00 [DBG] Stored original runInBackground value: True
+2025-12-08 15:04:35.426 +07:00 [INF] Deinitializing Coplay services
+2025-12-08 15:04:35.427 +07:00 [INF] ConsoleDebugButtonService disposing
+2025-12-08 15:04:35.429 +07:00 [INF] Unsubscribed from error detection
+2025-12-08 15:04:35.442 +07:00 [INF] EditorThreadHelper disposed
+2025-12-08 15:04:37.492 +07:00 [INF] Initializing Coplay services
+2025-12-08 15:04:37.819 +07:00 [DBG] Found 1 glTF importer(s), no conflict detected
+2025-12-08 15:04:37.820 +07:00 [INF] Initializing EditorThreadHelper
+2025-12-08 15:04:37.820 +07:00 [INF] EditorThreadHelper initialized successfully
+2025-12-08 15:04:37.835 +07:00 [INF] Enabling console error detection
+2025-12-08 15:04:37.843 +07:00 [INF] ConsoleDebugButtonService initializing
+2025-12-08 15:04:37.847 +07:00 [INF] ConsoleDebugButtonService initialized
+2025-12-08 15:04:39.197 +07:00 [INF] Loading state from file, and setting to: Initialized
+2025-12-08 15:04:39.216 +07:00 [INF] No request found, returning empty.
+2025-12-08 15:04:39.231 +07:00 [INF] No MCP servers configuration found
+2025-12-08 15:04:39.232 +07:00 [INF] MCP host initialized
+2025-12-08 15:04:39.235 +07:00 [INF] Loaded 0 scroll positions from disk
+2025-12-08 15:04:39.264 +07:00 [INF] Checking for dependencies in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 15:04:39.265 +07:00 [INF] Executable at C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries\ripgrep\x86_64\rg.exe exists: True
+2025-12-08 15:04:39.268 +07:00 [INF] RunInBackgroundStartupTask initialized - will enable background execution in play mode
+2025-12-08 15:04:42.580 +07:00 [INF] Subscribed to error detection
+2025-12-08 15:04:42.594 +07:00 [INF] No startup errors found after delayed check
+2025-12-08 15:04:42.604 +07:00 [DBG] Cannot update visibility - UI elements are null
+2025-12-08 15:04:43.109 +07:00 [DBG] Restored Application.runInBackground to original value: True
+2025-12-08 15:04:43.112 +07:00 [DBG] Stored original runInBackground value: True
+2025-12-08 15:04:43.116 +07:00 [DBG] Restored Application.runInBackground to original value: True
+2025-12-08 15:04:43.117 +07:00 [DBG] Stored original runInBackground value: True
+2025-12-08 15:04:43.130 +07:00 [INF] Checking for dependencies in: C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries
+2025-12-08 15:04:43.132 +07:00 [INF] Executable at C:\Users\ASUS ROG STRIX\Documents\CADT\year3\game\finalProject\Delivery-Guy\Packages\Coplay\Editor\Binaries\ripgrep\x86_64\rg.exe exists: True
+2025-12-08 15:04:43.216 +07:00 [INF] Placeholder text would be: What can I help with?
+2025-12-08 15:04:43.226 +07:00 [INF] Loading threads state
+2025-12-08 15:04:43.273 +07:00 [INF] Loading thread messages for thread cpl_thread_c028ae21_8e32_470b_b8ea_c3213d4516fe
+2025-12-08 15:04:43.275 +07:00 [INF] Saving state
+2025-12-08 15:04:43.347 +07:00 [INF] Clearing state model
+2025-12-08 15:04:43.347 +07:00 [WRN] You are setting to the same state: Initialized
+2025-12-08 15:04:43.351 +07:00 [INF] OnThreadChanged
+2025-12-08 15:04:43.352 +07:00 [INF] Handling state change: Initialized
+2025-12-08 15:04:43.916 +07:00 [DBG] Restored Application.runInBackground to original value: True
+2025-12-08 15:19:49.722 +07:00 [INF] Cleaned up all thumbnail textures
+2025-12-08 15:19:49.724 +07:00 [INF] AssistantController: Dispose called
+2025-12-08 15:19:49.724 +07:00 [INF] FunctionExecutionController: Dispose called
+2025-12-08 15:19:49.725 +07:00 [INF] Saving state

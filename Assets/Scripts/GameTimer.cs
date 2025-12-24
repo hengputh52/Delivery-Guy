@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
@@ -9,12 +10,10 @@ public class GameTimer : MonoBehaviour
     private bool isRunning = true;
 
     public TextMeshProUGUI timeText;
-    public ResultUI resultUI; // Assign in Inspector
+    //public ResultUI resultUI; // Assign in Inspector
 
     public Image timeIcon;
     private Animator anim;
-
-
 
     void Start()
     {
@@ -35,15 +34,18 @@ public class GameTimer : MonoBehaviour
         if(currentTime <= 10f && anim != null)
         {
             anim.SetTrigger("LowTime");
-            anim.SetTrigger("LowerTime");
+            //anim.SetTrigger("LowerTime");
         }
         if (currentTime <= 0)
         {
             currentTime = 0;
             isRunning = false;
-            Debug.Log("Time Up!");
-            if (resultUI != null)
-                resultUI.ShowResult(false, 0); // Show failed result
+            Debug.Log("Time Up! Loading GameOver...");
+            GameOverUIController.isWin = false;
+            GameOverUIController.score = 0;
+            GameOverUIController.lastLevelName = SceneManager.GetActiveScene().name;
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("GameOver");
         }
 
         UpdateUI();
@@ -67,8 +69,12 @@ public class GameTimer : MonoBehaviour
     // Call this when delivery is completed
     public void OnDeliveryComplete()
     {
-        if (resultUI != null)
-            resultUI.ShowResult(true, currentTime); // Show success result
         StopTimer();
+        // Report win and load GameOver scene; example score uses remaining time rounded
+        if (GameManager.instance != null)
+        {
+            int points = Mathf.RoundToInt(currentTime);
+            GameManager.instance.ReportWin(points);
+        }
     }
 }

@@ -12,10 +12,10 @@ public class DeliveryPoint : MonoBehaviour
         Debug.Log("DeliveryPoint script is active on: " + gameObject.name);
     }
 
-   private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("OnTriggerEnter called by: " + other.gameObject.name + " Tag: " + other.tag);
-        
+
         if (delivered) return;
 
         if (other.CompareTag("Player"))
@@ -25,8 +25,13 @@ public class DeliveryPoint : MonoBehaviour
             if (deliveryIcon != null)
                 deliveryIcon.SetActive(false);
 
-            //Deliver();
-            GameManager.instance.DeliveryComplete();
+            // Report win and load GameOver
+            Debug.Log("Player reached delivery point! Loading GameOver...");
+            GameOverUIController.isWin = true;
+            GameOverUIController.score = 10;
+            GameOverUIController.lastLevelName = SceneManager.GetActiveScene().name;
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("GameOver");
         }
     }
     void Deliver()
