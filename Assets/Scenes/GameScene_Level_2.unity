@@ -22942,7 +22942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c40719d7e301447a9e4980c8f1bc2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1304369595}
   speed: 12
   rotationSpeed: 5
   stopDistance: 2.5
@@ -26657,7 +26656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 60
   timeText: {fileID: 284565085}
-  resultUI: {fileID: 1055633425}
+  timeIcon: {fileID: 0}
 --- !u!1001 &620630270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27956,7 +27955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &655103773
 RectTransform:
   m_ObjectHideFlags: 0
@@ -62914,7 +62913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c40719d7e301447a9e4980c8f1bc2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1304369595}
   speed: 12
   rotationSpeed: 5
   stopDistance: 2.5
