@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
@@ -9,11 +8,15 @@ public class GameTimer : MonoBehaviour
     private bool isRunning = true;
 
     public TextMeshProUGUI timeText;
-    // Deprecated: ResultUI popup is replaced by GameOver scene
+    public ResultUI resultUI; // Assign in Inspector
 
     void Start()
     {
         currentTime = startTime;
+        if(timeIcon != null)
+        {
+            anim = timeIcon.GetComponent<Animator>();
+        }
         UpdateUI();
     }
 
@@ -23,6 +26,11 @@ public class GameTimer : MonoBehaviour
 
         currentTime -= Time.deltaTime;
 
+        if(currentTime <= 10f && anim != null)
+        {
+            anim.SetTrigger("LowTime");
+            anim.SetTrigger("LowerTime");
+        }
         if (currentTime <= 0)
         {
             currentTime = 0;
