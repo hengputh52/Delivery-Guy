@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
@@ -8,7 +10,10 @@ public class GameTimer : MonoBehaviour
     private bool isRunning = true;
 
     public TextMeshProUGUI timeText;
-    public ResultUI resultUI; // Assign in Inspector
+    //public ResultUI resultUI; // Assign in Inspector
+
+    public Image timeIcon;
+    private Animator anim;
 
     void Start()
     {
