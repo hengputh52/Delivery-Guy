@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Final-project-game.sln"
+    "dotnet.defaultSolution": "Delivery-Guy.sln"
 }

@@ -33,9 +33,8 @@ public class PoliceFollow : MonoBehaviour
         }
         else
         {
-            // Player caught
-            Debug.Log("Player caught by police!");
-            Time.timeScale = 0f;
+            // Player caught - do nothing, PoliceManager handles this
+            // Don't freeze time here, it prevents scene loading
         }
     }
 

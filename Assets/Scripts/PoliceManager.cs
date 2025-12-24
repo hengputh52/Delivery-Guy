@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PoliceManager : MonoBehaviour
 {
@@ -41,6 +42,8 @@ public class PoliceManager : MonoBehaviour
         foreach (var police in policeCars)
         {
             float dist = Vector3.Distance(police.transform.position, player.position);
+            Debug.Log($"Police distance to player: {dist:F2}, catchDistance: {catchDistance}");
+
             if (dist <= catchDistance)
             {
                 policeClose = true;
@@ -51,12 +54,18 @@ public class PoliceManager : MonoBehaviour
         if (policeClose)
         {
             catchTimer += Time.deltaTime;
+            Debug.Log($"Police close! Catch timer: {catchTimer:F2}/{catchTime}");
 
             if (catchTimer >= catchTime)
+            {
+                Debug.Log("CATCH TIME REACHED! Calling PlayerCaught()");
                 PlayerCaught();
+            }
         }
         else
         {
+            if (catchTimer > 0)
+                Debug.Log("Police too far, resetting catch timer");
             catchTimer = 0f;
         }
     }
@@ -65,6 +74,7 @@ public class PoliceManager : MonoBehaviour
     {
         if (chaseActive) return;
 
+        Debug.Log("StartChase called! Activating police...");
         chaseActive = true;
         policeWarningText.gameObject.SetActive(true);
 
@@ -72,6 +82,7 @@ public class PoliceManager : MonoBehaviour
         {
             police.gameObject.SetActive(true);
             police.StartChase(player);
+            Debug.Log($"Police {police.gameObject.name} activated and chasing");
         }
 
         DeliveryManager.Instance?.SetPoliceChaseInstruction();
@@ -79,9 +90,28 @@ public class PoliceManager : MonoBehaviour
 
     void PlayerCaught()
     {
-        Time.timeScale = 0f;
-        policeWarningText.text = "YOU WERE CAUGHT!";
+        Debug.Log("===== PLAYER CAUGHT! =====");
+        Debug.Log("Setting GameOver state...");
 
+        policeWarningText.text = "YOU WERE CAUGHT!";
         DeliveryManager.Instance?.SetLoseInstruction();
+
+        // Ensure this only triggers once
+        chaseActive = false;
+
+        // Set GameOver state and load scene
+        GameOverUIController.isWin = false;
+        GameOverUIController.score = 0;
+        GameOverUIController.lastLevelName = SceneManager.GetActiveScene().name;
+
+        Debug.Log($"isWin: {GameOverUIController.isWin}");
+        Debug.Log($"score: {GameOverUIController.score}");
+        Debug.Log($"lastLevelName: {GameOverUIController.lastLevelName}");
+        Debug.Log("Loading GameOver scene...");
+
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("GameOver");
+
+        Debug.Log("LoadScene called!");
     }
 }
