@@ -33,8 +33,8 @@ public class GameTimer : MonoBehaviour
 
         if(currentTime <= 10f && anim != null)
         {
-            anim.SetTrigger("LowTime");
-            //anim.SetTrigger("LowerTime");
+            //anim.SetTrigger("LowTime");
+            anim.SetTrigger("LowerTime");
         }
         if (currentTime <= 0)
         {
