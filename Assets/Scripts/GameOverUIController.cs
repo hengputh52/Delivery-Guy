@@ -7,7 +7,7 @@ public class GameOverUIController : MonoBehaviour
 {
     [Header("UI References")]
     public TextMeshProUGUI resultText;
-    public TextMeshProUGUI scoreText;
+    //public TextMeshProUGUI scoreText;
     public Button playAgainButton;
     public Button backToLevelButton;
 
@@ -41,12 +41,12 @@ public class GameOverUIController : MonoBehaviour
         else
             Debug.LogError("resultText is NULL!");
 
-        if (scoreText != null)
-        {
-            scoreText.text = $"{score} POINTS";
-        }
-        else
-            Debug.LogError("scoreText is NULL!");
+        // if (scoreText != null)
+        // {
+        //     scoreText.text = $"{score} POINTS";
+        // }
+        // else
+        //     Debug.LogError("scoreText is NULL!");
     }
 
     public void OnPlayAgain()
