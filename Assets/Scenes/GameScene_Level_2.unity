@@ -11010,7 +11010,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &277062497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11031,17 +11031,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Police is Chasing
+  m_text: Delivery in time , avoid collision and police caught
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4278300108
+  m_fontColor: {r: 0.79999995, g: 0.67785037, b: 0.0030189513, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -26656,7 +26656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 60
   timeText: {fileID: 284565085}
-  timeIcon: {fileID: 0}
+  timeIcon: {fileID: 1605463639}
 --- !u!1001 &620630270
 PrefabInstance:
   m_ObjectHideFlags: 0
