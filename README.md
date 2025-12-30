@@ -1,6 +1,7 @@
 
 # Delivery Guy
 
+
 ## Quick Navigation
 
 - [🎮 Phase 1: How to Play](#phase-1-how-to-play)
@@ -13,6 +14,81 @@
 - [📚 Phase 7: Documentation & Tools](#phase-7-documentation--tools)
 - [🤝 Phase 8: Contributing Guide](#phase-8-contributing-guide)
 - [👥 Phase 9: Credits](#phase-9-credits)
+
+---
+
+
+## Project Structure
+
+```
+Delivery Guy/
+├── Assets/
+│   ├── Scenes/           # All Unity scenes (MainMenu, LevelSelection, GameScene_level_1, etc.)
+│   ├── Scripts/          # C# scripts for gameplay, AI, UI, and managers
+│   ├── Prefabs/          # Prefab GameObjects (vehicles, delivery points, UI panels, etc.)
+│   ├── Resources/        # Fonts, icons, and other resources loaded at runtime
+│   ├── Textures/         # Textures and materials for 3D models and UI
+│   ├── Loading Games/    # 3D models and city assets (e.g., Toon City Pack)
+│   ├── Images/           # UI images, icons, and sprites
+│   ├── Animation/        # Animation clips and controllers for vehicles and UI
+│   ├── Gley/             # (If present) Third-party or asset store plugins
+│   ├── Editor/           # Editor scripts and custom inspectors
+│   └── ... (other folders as needed)
+├── Builds/                # Built game files (.exe, data folder)
+├── Docs/                  # Documentation and PDF files
+├── ProjectSettings/       # Unity project settings
+├── Packages/              # Unity package manager files
+├── README.md              # Project overview and instructions
+├── LICENSE                # License information
+```
+
+### Key Folders and Their Purpose
+
+- **Scenes/**: Contains all Unity scene files. Each scene represents a different part of the game (e.g., MainMenu, LevelSelection, GameScene_level_1, GameOver, etc.).
+- **Scripts/**: All C# scripts for the project. Examples:
+	- `PlayerCarController.cs`: Handles player vehicle input and movement.
+	- `AITruckController.cs`, `AICarController.cs`: Control AI vehicles and traffic.
+	- `PoliceFollow.cs`: Police car chase logic.
+	- `GameTimer.cs`: Manages the countdown timer and triggers win/lose.
+	- `ResultUI.cs`, `PauseManager.cs`: UI logic for results and pausing.
+	- `GameManager.cs`, `DeliveryManager.cs`: Game state and delivery logic.
+- **Prefabs/**: Reusable GameObjects, such as:
+	- Player and AI vehicle prefabs
+	- Delivery point prefab
+	- UI panels (pause, result, etc.)
+- **Resources/**: Fonts, icons, and assets loaded dynamically at runtime.
+- **Textures/**: All textures and materials for 3D models and UI elements.
+- **Loading Games/**: Contains 3D models, city assets, and environment props (e.g., Toon City Pack models).
+- **Images/**: UI icons, button sprites, and other image assets.
+- **Animation/**: Animation clips and controllers for vehicles, UI, and effects.
+- **Gley/**: (If present) Third-party plugins or asset store tools.
+- **Editor/**: Scripts for custom Unity editor tools or inspectors.
+
+### Example Scenes in Scenes/
+- `MainMenu.unity`: The main menu scene.
+- `LevelSelection.unity`: Level selection screen.
+- `GameScene_level_1.unity`, `GameScene_level_2.unity`, ...: Main gameplay scenes for each level.
+- `GameOver.unity`: Result screen after win/lose.
+
+### Example Prefabs in Prefabs/
+- `PlayerCar.prefab`: The player’s vehicle.
+- `AICar.prefab`, `AITruck.prefab`, `PoliceCar.prefab`: AI-controlled vehicles.
+- `DeliveryPoint.prefab`: The delivery target.
+- `PausePanel.prefab`, `ResultPanel.prefab`: UI panels for pause and results.
+
+### Example Scripts in Scripts/
+- `PlayerCarController.cs`: Player driving logic.
+- `AITruckController.cs`, `AICarController.cs`: AI vehicle logic.
+- `PoliceFollow.cs`: Police chase behavior.
+- `GameTimer.cs`: Timer and time-based events.
+- `ResultUI.cs`: Displays win/lose results.
+- `PauseManager.cs`: Pause and resume logic.
+- `GameManager.cs`: Manages overall game state and transitions.
+- `DeliveryManager.cs`: Handles delivery objectives and completion.
+
+---
+
+---
 
 ---
 
@@ -92,10 +168,21 @@ You are a delivery driver in a vibrant, cartoon-style city. Your mission: delive
 
 ---
 
+
 ## 📦 Phase 6: Release Version
 
-- **Download:** [Coming Soon]
-- **Build:** Open in Unity, add all scenes to Build Settings, and build for Windows.
+- **Download the Game:**
+	- [Download Delivery Guy (Windows .exe)](https://github.com/hengputh52/Delivery-Guy/releases/download/Delivery_Guy_Game/Deliery.Guy.3d.Game.zip)
+
+- **Build Instructions:**
+	- Open the project in Unity.
+	- Add all scenes to Build Settings.
+	- Build for Windows platform (output in `Builds/` folder).
+
+- **Documentation PDF:**
+	- [Read the Game Documentation (PDF)](https://drive.google.com/drive/folders/1muKAmZsYnmQA69Vbp5BrA4iTO76a4gS7?usp=sharing)
+
+---
 
 ---
 
@@ -129,3 +216,14 @@ You are a delivery driver in a vibrant, cartoon-style city. Your mission: delive
 
 ## License
 This project is for educational and personal use. See LICENSE file for details.
+
+---
+
+## Teamwork
+CADT-Gen10-SE-Group2
+
+1. Lon Mengheng
+2. Vy Vicheka
+3. Sophal Taingchhay
+4. Panha Viraktitya
+5. May Kunaphivath
